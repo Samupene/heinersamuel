@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home- NoSmoke</title>
+    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style> 
+
+    
+        </style>
+</head>
+
+<body>
+    <header class = "menu">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Logo de NoSmoke"  style="width: 100px; height: auto; position: absolute; top: 10px; left: 10px;">
+            </a>
+        </div>
+        <button id="modooscuro"><i class="fas fa-moon"></i></button> <!-- Botón de la luna -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="princ">
+            <ul class="princ-nav-list">
+                <li class="princ-nav-list-li"><a href="../index.html" class="princ-nav-list-li-a">Home</a></li>
+                <li class="princ-nav-list-li"><a href="servicios.html" class="princ-nav-list-li-a">Comprar</a></li>
+                <li class="princ-nav-list-li"><a href="FAQ.html" class="princ-nav-list-li-a">Preguntas</a></li>
+                
+                <li class="princ-nav-list-li"><a href="#" class="princ-nav-list-li-a">Cliente</a></li>
+        </ul>
+    </nav>
+    </header>
+    <h1 class="bienvenida">Portal de clientes</h1>
+    <!-- Formulario de contacto -->
+<section class="formulario-contacto">
+  <h2>Contáctanos</h2>
+  <form action="#" method="post">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+    </div>
+    <div class="form-group">
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+    </div>
+    <div class="form-group">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btne-form">Enviar</button>
+  </form>
+</section>
+    </section>
+    <footer class="custom-footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>NoSmoke</h3>
+            <p>
+              Somos una empresa especializada en soluciones tecnológicas para la detección de vapeo en espacios cerrados. Nos destacamos por nuestra innovación y compromiso con la seguridad y el bienestar.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Yumbo, Colombia</p>
+            <p><i class="fas fa-phone"></i> +57 3184728385</p>
+            <p><i class="fas fa-envelope"></i> HOla@nosmoke.com</p>
+          </div>
+          <div class="footer-section">
+            <h3>Sitio Web</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="Aboutus.html">Nosotros</a></li>
+              <li><a href="servicios.html">Servicios</a></li>
+              <li><a href="FAQ.html">Preguntas</a></li>
+              <li><a href="Cliente.html">Cliente</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Políticas</h3>
+            <ul>
+              <li><a href="#">Aviso legal</a></li>
+              <li><a href="#">Privacidad de datos</a></li>
+              <li><a href="#">Calidad</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Garantías</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 NoSmoke. Todos los derechos reservados.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
