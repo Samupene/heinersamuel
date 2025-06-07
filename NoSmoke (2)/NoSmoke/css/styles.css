@@ -1,0 +1,846 @@
+/* Reset general del sitio web */
+* {
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina relleno */
+  box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total */
+  font-family: Arial, Helvetica, sans-serif; /* Fuente por defecto */
+}
+.hamburger {
+  display: none; /* Ocultar por defecto */
+  font-size: 24px; /* Tamaño del ícono */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  position: absolute; /* Posición absoluta */
+  top: 15px; /* Distancia desde la parte superior */
+  right: 20px; /* Distancia desde la derecha */
+  z-index: 10; /* Asegura que esté encima de otros elementos */
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background-color: #dcdcdc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilo para el encabezado de bienvenida */
+.bienvenida {
+  font-size: 24px; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea */
+  color: #000000; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+.compra {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.compra h2 {
+  margin-bottom: 20px;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.producto-img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto-info {
+  flex: 1;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.producto-info h3 {
+  margin: 0 0 10px;
+}
+
+.producto-info p {
+  margin: 0 0 10px;
+}
+
+.producto-info label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.producto-info input {
+  width: 60px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.dark-mode .compra {
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: #f0f0f0; /* Texto claro */
+}
+
+/* Ajustar el color del texto en la información del producto */
+.dark-mode .producto-info h3,
+.dark-mode .producto-info p,
+.dark-mode .producto-info label {
+  color: #f0f0f0; /* Texto claro */
+}
+
+/* Ajustar el color del borde y fondo del input */
+.dark-mode .producto-info input {
+  background-color: #333; /* Fondo oscuro */
+  color: #f0f0f0; /* Texto claro */
+  border: 1px solid #555; /* Borde gris oscuro */
+}
+.dark-mode .formulario-contacto {
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: #f0f0f0; /* Texto claro */
+}
+
+/* Ajustar el color de las etiquetas */
+.dark-mode .form-group label {
+  color: #f0f0f0; /* Texto claro */
+}
+
+/* Ajustar el fondo y el texto de los campos de entrada */
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background-color: #333; /* Fondo oscuro */
+  color: #f0f0f0; /* Texto claro */
+  border: 1px solid #555; /* Borde gris oscuro */
+}
+
+/* Estilo para párrafos principales */
+.primero {
+  font-size: 20px; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea */
+  color: #333; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+
+/* Estilo para el logo */
+.logo-img {
+  width: 100px; /* Ancho del logo */
+  height: auto; /* Altura proporcional */
+  position: absolute; /* Posición absoluta */
+  top: 10px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la izquierda */
+  margin-right: 10px;
+}
+/* Ajustar la posición del botón de la luna */
+#modooscuro {
+  position: absolute;
+  top: 50%;
+  left: 130px; /* Ajustado para estar después del logo (que está a 10px) */
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #000;
+  z-index: 1001;
+}
+
+/* Lista de navegación principal */
+.princ-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px; /* Más espacio entre botones */
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+  width: auto;
+  justify-content: center;
+}
+
+/* Elementos individuales del menú */
+.princ-nav-list-li {
+  margin: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  list-style: none; /* Quitar puntos si quedara alguno */
+}
+
+/* Botones de navegación */
+.princ-nav-list-li-a,
+.princ-nav-list-li button {
+  display: inline-block;
+  padding: 12px 35px; /* Botones más grandes */
+  background: #888;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.2rem; /* Texto más grande */
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 0;
+}
+
+.princ-nav-list-li-a:hover,
+.princ-nav-list-li button:hover {
+  background: #777;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Quitar subrayado de enlaces */
+.princ-nav-list-li-a {
+  text-decoration: none;
+}
+
+/* Modo oscuro para botones */
+.dark-mode .princ-nav-list-li-a,
+.dark-mode .princ-nav-list-li button {
+  background: #333;
+  color: #f0f0f0;
+}
+
+.dark-mode .princ-nav-list-li-a:hover,
+.dark-mode .princ-nav-list-li button:hover {
+  background: #444;
+  color: #fff;
+}
+
+/* Botón genérico */
+.formulario-contacto {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btne {
+  padding: 10px 20px; /* Espaciado interno */
+  background: #888; /* Fondo gris oscuro */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  margin: 30px; /* Márgenes */
+}
+.btne-form {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.btne-form:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor principal */
+.conchainer {
+  display: flex; /* Elementos en línea */
+  padding: 2em; /* Espaciado interno */
+  justify-content: center; /* Centra los elementos */
+  align-items: center; /* Alinea verticalmente */
+}
+
+/* Imagen con sombra */
+.det-img img {
+  width: 300px; /* Ancho de la imagen */
+  box-shadow: -6px 3px 10px #888; /* Sombra hacia la izquierda */
+  margin-right: 30px; /* Espaciado a la derecha */
+}
+
+/* Contenedor de texto */
+.bbndiva {
+  margin-left: 2em; /* Espaciado a la izquierda */
+  max-width: 400px; /* Ancho máximo */
+  text-align: center; /* Centra el texto */
+}
+
+/* Títulos dentro del contenedor */
+.bbndiva h2 {
+  margin-bottom: 0.2em; /* Espaciado inferior */
+}
+
+/* Sección de características */
+.caract {
+  text-align: center; /* Centra el texto */
+  margin-top: 2em; /* Espaciado superior */
+}
+
+/* Contenedor de íconos */
+.caract-icon {
+  display: flex; /* Elementos en línea */
+  justify-content: center; /* Centra los elementos */
+  gap: 3em; /* Espaciado entre elementos */
+  margin-top: 1em; /* Espaciado superior */
+}
+
+/* Contenedor individual de íconos */
+.icon-img {
+  text-align: center; /* Centra el texto */
+}
+
+/* Imagen de íconos */
+.icon-img img {
+  width: 50px; /* Ancho de la imagen */
+}
+/* Botón "Ver más" */
+.ver-mas-btn {
+  margin-top: 2em; /* Espaciado superior */
+  padding: 10px 20px; /* Espaciado interno */
+  background: #dcdcdc; /* Fondo gris claro */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar */
+}
+
+/* Pie de página */
+.fot {
+  background-color: #222; /* Fondo negro */
+  color: white; /* Texto blanco */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  font-size: 0.8rem; /* Tamaño de fuente pequeño */
+}
+
+/* Estilo para texto destacado */
+.quines {
+  font-size: 20px; /* Tamaño de fuente */
+  line-height: 1.0; /* Altura de línea */
+  color: black; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+
+/* Contenedor principal de "quienes" */
+.quienes {
+  min-height: 100vh; /* Altura mínima de la pantalla */
+  display: flex; /* Elementos en línea */
+  flex-direction: column; /* Apila los elementos verticalmente */
+}
+
+/* Estilo para párrafos en la sección de preguntas */
+.preguntas p {
+  font-size: 20px; /* Tamaño de fuente */
+  line-height: 1.0; /* Altura de línea */
+  color: black; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+
+/* Contenedor de la sección de preguntas */
+.preguntas {
+  min-height: 100vh; /* Altura mínima de la pantalla */
+  display: flex; /* Elementos en línea */
+  flex-direction: column; /* Apila los elementos verticalmente */
+}
+
+/* Títulos en la sección de preguntas */
+.preguntas h2 {
+  text-align: center; /* Centra el texto */
+  line-height: 1.0; /* Altura de línea */
+  color: black; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Contenedor principal */
+.wrapper {
+  display: flex; /* Elementos en línea */
+}
+
+/* Encabezado fijo */
+
+
+/* Contenedor de íconos */
+.wrapper .icon-container {
+  position: relative; /* Posición relativa */
+  left: 1070px; /* Desplazamiento hacia la derecha */
+  width: 70px; /* Ancho del contenedor */
+  height: 60px; /* Altura del contenedor */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #121212; /* Color del texto */
+  display: flex; /* Elementos en línea */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  margin: 0 10px; /* Márgenes laterales */
+  border-radius: 28%; /* Bordes redondeados */
+  box-shadow: 0 5px 15px -5px rgb(0 0 0 / 10%); /* Sombra */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  font-size: 36px; /* Tamaño de fuente */
+  text-decoration: none; /* Sin subrayado */
+  opacity: 0.99; /* Opacidad */
+  overflow: hidden; /* Oculta el contenido desbordado */
+}
+
+/* Efecto de fondo animado */
+.wrapper .icon-container::before {
+  content: ""; /* Contenido vacío */
+  width: 120%; /* Ancho del fondo */
+  height: 120%; /* Altura del fondo */
+  position: absolute; /* Posición absoluta */
+  top: 90%; /* Posición inicial */
+  left: -110%; /* Posición inicial */
+  -webkit-transform: rotate(45deg); /* Rotación en navegadores WebKit */
+  transform: rotate(45deg); /* Rotación */
+  transition: all 0.35s; /* Transición suave */
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59); /* Curva de transición */
+  z-index: 1; /* Prioridad del fondo */
+}
+
+/* Ícono dentro del contenedor */
+.wrapper .icon-container .icon {
+  -webkit-transform: scale(0.8); /* Escala inicial en navegadores WebKit */
+  transform: scale(0.8); /* Escala inicial */
+  transition: all 0.35s; /* Transición suave */
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59); /* Curva de transición */
+  z-index: 2; /* Prioridad del ícono */
+}
+
+/* Estilo para íconos de Facebook */
+.wrapper .icon-container.facebook {
+  color: #3b5998; /* Color azul de Facebook */
+}
+
+/* Estilo para íconos de Twitter */
+.wrapper .icon-container.twitter {
+  color: #5da9dd; /* Color azul claro de Twitter */
+}
+
+/* Estilo para el ícono de YouTube */
+.wrapper .icon-container.youtube {
+  color: #fe0108; /* Color rojo de YouTube */
+}
+
+/* Efecto al pasar el cursor sobre los íconos */
+.wrapper .icon-container:hover .icon {
+  color: #ffffff; /* Cambia el color del ícono a blanco */
+  -webkit-transform: scale(1); /* Escala el ícono al tamaño original */
+  transform: scale(1); /* Escala el ícono al tamaño original */
+}
+
+/* Efecto de animación en el fondo al pasar el cursor */
+.wrapper .icon-container:hover::before {
+  top: -10%; /* Ajusta la posición superior */
+  left: -10%; /* Ajusta la posición izquierda */
+}
+
+/* Fondo animado para el ícono de Facebook al pasar el cursor */
+.wrapper .icon-container.facebook:hover::before {
+  background-color: #3b5998; /* Fondo azul de Facebook */
+}
+
+/* Fondo animado para el ícono de Twitter al pasar el cursor */
+.wrapper .icon-container.twitter:hover::before {
+  background-color: #5da9dd; /* Fondo azul claro de Twitter */
+}
+
+/* Fondo animado para el ícono de YouTube al pasar el cursor */
+.wrapper .icon-container.youtube:hover::before {
+  background-color: #fe0108; /* Fondo rojo de YouTube */
+}
+
+/* Contenedor principal */
+main {
+  flex: 1; /* Permite que el contenedor ocupe el espacio disponible */
+}
+
+/* Estilo para las imágenes en la sección "quienes" */
+.quienes img {
+  width: 300px; /* Ancho de la imagen */
+  height: auto; /* Altura proporcional */
+  position: relative; /* Posición relativa */
+  margin: 20px auto; /* Centra la imagen horizontalmente */
+  display: block; /* Hace que la imagen sea un bloque */
+}
+
+/* Estilo para el pie de página */
+.custom-footer {
+  background-color: #333; /* Fondo gris oscuro */
+  color: #f0f0f0; /* Texto gris claro */
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Espaciado interno */
+  font-size: 0.9rem; /* Tamaño de fuente */
+}
+
+/* Contenedor del pie de página */
+.footer-container {
+  display: flex; /* Elementos en línea */
+  justify-content: space-around; /* Espaciado uniforme */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten */
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Secciones individuales del pie de página */
+.footer-section {
+  flex: 1; /* Ocupa el mismo espacio */
+  margin: 10px; /* Márgenes */
+  min-width: 200px; /* Ancho mínimo */
+}
+
+/* Títulos dentro del pie de página */
+.footer-section h3 {
+  color: #ffffff; /* Texto blanco */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Listas dentro del pie de página */
+.footer-section ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin relleno */
+}
+
+/* Elementos de las listas */
+.footer-section ul li {
+  margin: 5px 0; /* Márgenes verticales */
+}
+
+/* Enlaces dentro del pie de página */
+.footer-section ul li a {
+  color: #dcdcdc; /* Texto gris claro */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Enlaces al pasar el cursor */
+.footer-section ul li a:hover {
+  text-decoration: underline; /* Subrayado */
+  color: #ffffff; /* Texto blanco */
+}
+
+
+/* Línea y texto inferior del pie de página */
+.footer-bottom {
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Espaciado superior */
+  border-top: 1px solid #555; /* Línea gris medio */
+  padding-top: 10px; /* Espaciado superior */
+}
+
+/* Íconos de redes sociales */
+.social-icons a {
+  color: #dcdcdc; /* Íconos en gris claro */
+  margin: 0 10px; /* Márgenes laterales */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Íconos al pasar el cursor */
+.social-icons a:hover {
+  color: #ffffff; /* Íconos en blanco */
+}
+
+/* Estilo adicional para la sección de contacto */
+.contactom {
+  font-size: 20px; /* Tamaño de fuente */
+  line-height: 1.0; /* Altura de línea */
+  color: black; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+
+/* Fondo del cuerpo */
+body {
+  background-color: #f0f0f0; /* Fondo gris claro */
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+}
+
+/* Estilo general para el modo oscuro */
+.dark-mode {
+  background-color: #121212; /* Fondo oscuro */
+  color: #f0f0f0; /* Texto claro */
+}
+/* Cambiar el color de los encabezados y párrafos en modo oscuro */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p {
+  color: #f0f0f0; /* Texto claro */
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Evitar desplazamiento horizontal */
+}
+/* Cambiar el fondo de la sección "quienes" */
+.dark-mode .quienes {
+  background-color: #1e1e1e; /* Fondo oscuro */
+}
+
+.dark-mode .hamburger {
+  color: #f0f0f0; /* Cambia el color en modo oscuro */
+}
+/* Cambiar el color de los textos en la sección "quienes" */
+.dark-mode .quines {
+  color: #f0f0f0; /* Texto claro */
+}
+
+/* Cambiar el color de los enlaces en modo oscuro */
+.dark-mode a {
+  color: #f0f0f0; /* Texto claro */
+}
+
+.dark-mode a:hover {
+  color: #ffcc00; /* Color de enlace al pasar el cursor */
+}
+
+/* Cambiar el color del pie de página */
+/* Cambiar el color del pie de página en modo oscuro */
+.dark-mode .custom-footer {
+  background-color: #2a2a2a; /* Fondo ligeramente más claro */
+  color: #f0f0f0; /* Texto claro */
+}
+
+/* Cambiar el color del texto en enlaces */
+.dark-mode a {
+  color: #f0f0f0; /* Texto claro */
+}
+
+.dark-mode a:hover {
+  color: #ffcc00; /* Color de enlace al pasar el cursor */
+}
+
+/* Cambiar el color del encabezado */
+.dark-mode header {
+  background-color: #121212; /* Fondo oscuro para el encabezado */
+}
+
+/* Cambiar el color del pie de página */
+/* Cambiar el color del pie de página en modo oscuro */
+.dark-mode .custom-footer {
+  background-color: #1a1a1a; /* Fondo más claro que el cuerpo */
+  color: #f0f0f0; /* Texto claro */
+}
+
+/* Cambiar el color del texto en enlaces dentro del footer */
+.dark-mode .custom-footer a {
+  color: #f0f0f0; /* Texto claro */
+}
+
+.dark-mode .custom-footer a:hover {
+  color: #ffcc00; /* Color de enlace al pasar el cursor */
+}
+
+/* Cambiar el color de los botones */
+.dark-mode .btne,
+.dark-mode .btne-form {
+  background-color: #444; /* Fondo oscuro para botones */
+  color: #f0f0f0; /* Texto claro */
+}
+
+.dark-mode .btne:hover,
+.dark-mode .btne-form:hover {
+  background-color: #555; /* Fondo más oscuro al pasar el cursor */
+}
+.hamburger {
+  cursor: pointer;
+  font-size: 24px;
+  color: #000;
+}
+.princ-nav-list.show {
+  display: flex !important;
+  background-color: #dcdcdc;
+  animation: slideDown 0.3s ease-in-out;
+}
+.dark-mode .princ-nav-list.show {
+  background-color: #333;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Mostrar el ícono de menú hamburguesa */
+  }
+.dark-mode .princ-nav-list.show {
+  background-color: #333;
+}
+  .princ-nav-list {
+    display: none; /* Ocultar el menú por defecto */
+    flex-direction: column;
+    align-items: center; /* Centrar elementos */
+    gap: 15px; /* Aumentar espacio entre elementos */
+    padding: 20px; /* Más padding */
+    background: #333;
+    width: 100%; /* Ocupar todo el ancho */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-radius: 0 0 8px 8px; /* Redondear ambas esquinas inferiores */
+    z-index: 9;
+  }
+
+  .princ-nav-list-li {
+    width: 100%; /* Ocupar todo el ancho */
+    text-align: center; /* Centrar texto */
+  }
+
+  .princ-nav-list-li-a,
+  .princ-nav-list-li button {
+    width: 100%; /* Botones ocupan todo el ancho */
+    padding: 15px; /* Más padding para mejor touch target */
+  }
+  .princ-nav-list.show {
+  display: flex !important;
+  background-color: #dcdcdc;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+  /* Ajustes para el footer en móvil */
+  .footer-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 100%; /* Ocupar todo el ancho */
+    margin: 15px 0; /* Espaciado vertical */
+    min-width: unset; /* Eliminar ancho mínimo */
+  }
+
+  /* Ajustes para contenido principal */
+  .conchainer {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .det-img img {
+    width: 60%; /* Imagen más grande en móvil */
+    margin: 0 auto 20px; /* Centrar y añadir espacio abajo */
+  }
+
+  .bbndiva {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  /* Ajustes para la sección de características */
+  .caract-icon {
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 0 20px;
+  }
+
+  /* Ajustes para los iconos sociales */
+  .wrapper .icon-container {
+    position: static; /* Eliminar posicionamiento absoluto */
+    left: auto;
+    margin: 10px;
+  }
+
+  .wrapper {
+    justify-content: center; /* Centrar iconos sociales */
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+}
+
+/* ...existing code... */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%); /* Comienza fuera de la izquierda */
+    opacity: 0; /* Sin visibilidad */
+  }
+  to {
+    transform: translateX(0); /* Termina en su posición original */
+    opacity: 1; /* Totalmente visible */
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Aplicar la animación a la imagen */
+.det-img img {
+  animation: slide-in-left 0.5s ease-out; /* Aplica la animación */
+}
+/* Mostrar el menú de navegación en pantallas grandes */
+@media (min-width: 769px) {
+  .princ-nav-list {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-end; /* O flex-start, según prefieras */
+  }
+  .princ-nav-list-li {
+    margin: 0 25px; /* Espacio entre enlaces */
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  .princ-nav-list-li-a {
+    color: #222;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0 5px;
+    background: none;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+}
